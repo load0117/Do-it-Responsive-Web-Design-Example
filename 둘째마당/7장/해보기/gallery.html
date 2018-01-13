@@ -1,0 +1,105 @@
+	<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1 , minimum-scale=1, maximum-scale = 1, user-scalable=no">
+<title>갤러리</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="">
+<link rel="hortcut icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="images/favicon/flat-design-touch.png">
+<script src="js/jquery.min.js"></script>
+<style>
+
+#wrap{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#wrap section{
+	box-sizing: border-box;
+}
+	
+	@media all and (min-width: 768px){
+		#wrap{
+			flex-flow: row wrap;
+		}
+	}
+	
+	@media all and (min-width: 960px){
+		#wrap{
+			position: relative;
+			width: 90%;
+		}
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<section class="info_section">
+		</section>
+		<header class="header">
+		</header>
+		<section class="sub_header_section">
+			<h2>현재 페이지와 연결되어 있는 메뉴 이름</h2>
+			<ul class="breadcrum_list">
+				<li><a href="index.html">홈</a></li>
+				<li><a href="현재 페이지 경로">현재 페이지와 연결되어 있는 메뉴 이름</a></li>
+			</ul>
+		</section>
+			<section class="content_section">
+				<div class="content_row_1">
+					<ul class="gallery_list">
+						<li><a href=""><img src="images/p_images/sub_gallery_01.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_02.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_03.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_04.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_05.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_06.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_07.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_08.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_09.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_10.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_11.jpg"></a></li>
+						<li><a href=""><img src="images/p_images/sub_gallery_12.jpg"></a></li>
+					</ul>
+				</div>
+				<div class="content_row_2">
+					<div class="search_box">
+						<form action="#" method="get">
+							<input type="search" name="gallery_search_window" class="search_window" placeholder="검색어">
+							<div class="search_select_box">
+								<span>검색 대상</span>
+								<ul>
+									<li>제목</li>
+									<li>내용</li>
+									<li>제목+내용</li>
+									<li>댓글</li>
+									<li>이름</li>
+									<li>닉네임</li>
+									<li>아이디</li>
+									<li>태그</li>
+								</ul>
+							</div>
+							<div class="write_box">
+								<a href="#">글 쓰기</a>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="content_row_3">
+					<span class="list_prev_btn">갤러리 이전 버튼</span>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<span class="list_next_btn">갤러리 다음 버튼</span>
+				</div>
+		</section>
+		<footer class="footer">
+		</footer>
+	</div>
+</body>
+</html>
