@@ -11,6 +11,67 @@
 <script src="js/jquery.min.js"></script>
 <style>
 
+.gallery_list img{
+	width: 100%;
+	max-width:100%;
+	border-radius: 5px;
+	transition: all 0.4s;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+
+.gallery_list img:hover{
+	-webkit-filter:grayscale(0);
+	filter: grayscale(0);
+}
+
+.gallery_list li{
+	margin-top:  20px;
+	margin-top: 1.250rem;
+}
+
+.gallery_list li:first-child{
+	margin-top: 0;
+}
+
+.content_row_2{
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0 40px 0;
+	margin: 1.875rem 0 2.500rem 0;
+}
+
+.search_window{
+	width: 118px;
+	width: 7.375rem;
+	height: 28px;
+	height: 1.750rem;
+	font-size: 0.688em;
+	font-size: 0.688rem;
+	line-height: 28px;
+	line-height: 1.750rem;
+	text-indent: 10px;
+	text-indent: 0.625rem;
+}
+
+.search_select_box{
+	display:none;
+}
+
+.write_box a{
+	display: block;
+	width: 70px;
+	width: 4.375rem;
+	height: 30px;
+	height: 1.875rem;
+	font-size: 0.813em;
+	font-size: 0.813rem;
+	line-height: 30px;
+	line-height: 1.875rem;
+	text-align: center;
+	color:#fff;
+	background: #e65d5d;
+}
 #wrap{
 	display: flex;
 	flex-flow: column nowrap;
