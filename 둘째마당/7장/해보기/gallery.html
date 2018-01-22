@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -6,8 +6,8 @@
 <title>갤러리</title>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="">
-<link rel="hortcut icon" href="images/favicon/favicon.ico">
-<link rel="apple-touch-icon-precomposed" href="images/favicon/flat-design-touch.png">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="images/icon/flat-design-touch.png">
 <script src="js/jquery.min.js"></script>
 <style>
 
@@ -72,6 +72,55 @@
 	color:#fff;
 	background: #e65d5d;
 }
+
+.content_row_3{
+	display: flex;
+	justify-content: center;
+}
+
+.content_row_3 span{
+	width: 28px;
+	width: 1.750rem;
+	height: 28px;
+	height: 1.750rem;
+	text-indent: -9999px;
+}
+
+.content_row_3 span.list_prev_btn{
+	margin-right: 10px;
+	margin-right: 0.625rem;
+	background: #2ecc71 url(images/s_images/list_prev_btn.png) center center no-repeat;
+}
+
+.content_row_3 span.list_next_btn{
+	margin-left: 10px;
+	margin-left: 0.625rem;
+	background: #2ecc71 url(images/s_images/list_next_btn.png) center center no-repeat;
+}
+
+.content_row_3 a{
+	width: 26px;
+	width: 1.625rem;
+	font-size: 0.813em;
+	font-size: 0.813rem;
+	line-height: 26px;
+	line-height: 1.625rem;
+	text-align: center;
+	border: 1px solid #219af7;
+	color:#219af7;
+	transition: all 0.2s;
+}
+
+.content_row_3 a:nth-of-type(2){
+	margin: 0 6px;
+	margin: 0 0.375rem;
+}
+
+.content_row_3 a:hover{
+	color:#fff;
+	background: #219af7;
+}
+
 #wrap{
 	display: flex;
 	flex-flow: column nowrap;
@@ -88,12 +137,81 @@
 		#wrap{
 			flex-flow: row wrap;
 		}
+
+		.gallery_list{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.gallery_list li{
+			width: 48.54651162790698%;
+		}
+
+		.gallery_list li:nth-child(2){
+			margin-top: 0;
+		}
+
+		.search_select_box{
+			display: inline-block;
+			position: relative;
+		}
+
+		.search_select_box span{
+			display: inline-block;
+			width: 80px;
+			width: 5.000rem;
+			height: 30px;
+			height: 1.874rem;
+			font-size: 0.813em;
+			font-size: 0.813rem;
+			line-height: 28px;
+			line-height: 1.750rem;
+			text-align: center;
+			color: #fff;
+			background: #e65d5d;
+			cursor: pointer;
+		}
+
+		.search_select_list{
+			display: none;
+			position: absolute;
+			top:105%;
+			left: 0;
+			width: 100%;
+		}
+
+		.search_select_list li{
+			padding: 6px 0;
+			padding: 0.375rem 0;
+			font-size: 0.750em;
+			font-size: 0.750rem;
+			text-indent: 10px;
+			text-indent: 0.625rem;
+			color: #fff;
+			background: #e65d5d;
+			cursor: pointer;
+		}
+
+		.search_select_box:hover .search_select_lst{
+			display: block;
+		}
 	}
-	
+	/*PC용 CSS*/
 	@media all and (min-width: 960px){
 		#wrap{
 			position: relative;
 			width: 90%;
+		}
+
+		.gallery_list li{
+			width: 23.92857142857143%;
+			margin-top: 12px;
+			margin-top: 0.750rem;
+		}
+
+		.gallery_list li:nth-child(3), .gallery_list li:nth-child(4){
+			margin-top: 0;
 		}
 	}
 </style>
@@ -134,7 +252,7 @@
 							<input type="search" name="gallery_search_window" class="search_window" placeholder="검색어">
 							<div class="search_select_box">
 								<span>검색 대상</span>
-								<ul>
+								<ul class="search_select_list">
 									<li>제목</li>
 									<li>내용</li>
 									<li>제목+내용</li>

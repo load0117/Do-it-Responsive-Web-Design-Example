@@ -19,16 +19,87 @@
 	max-width: 1200px;
 }
 
+/*콘텐츠 영역 css*/
+
+.board_table{
+	width: 100%;
+}
+
+.board_table caption{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.board_table thead, .board_table tbody{
+	font-size: 0.813em;
+	font-size: 0.813rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.board_table thead{
+	color: #fff;
+	background: #2c3e50;
+}
+
+.board_table tbody, .board_table tbody a{
+	color: #333;
+}
+
+.board_table tbody tr:nth-child(odd){
+	background: #f6f6f6;
+}
+
+.board_table thead tr th{
+	padding: 18px 0;
+	padding: 1.125rem 0;
+}
+
+.board_table tbody tr td{
+	padding: 22px 0;
+	padding: 1.375rem 0;
+}
+
+.board_table thead tr th:first-child,.board_table thead tr th:nth-child(3), .board_table thead tr th:nth-child(4),
+.board_table tbody tr td:first-child,.board_table tbody tr td:nth-child(3), .board_table tbody tr td:nth-child(4){
+	display: none;
+}
 #wrap section{
 	box-sizing: border-box;
 }
-	
+	/*테블릿용 css*/
 	@media all and (min-width: 768px){
 		#wrap{
 			flex-flow: row wrap;
 		}
+		.board_table thead tr th:first-child,.board_table thead tr th:nth-child(3), .board_table thead tr th:nth-child(4),
+		.board_table tbody tr td:first-child,.board_table tbody tr td:nth-child(3), .board_table tbody tr td:nth-child(4){
+			display: table-cell;
+		}
+
+		.board_table thead tr th:first-child{
+			width: 10%;
+		}
+		.board_table thead tr th:nth-child(2){
+			width: 65%;
+		}
+		.board_table thead tr th:nth-child(3){
+			width: 15%;
+		}
+		.board_table thead tr th:nth-child(4){
+			width: 10%;
+		}
+
+		.board_table tbody tr td:nth-child(2){
+			text-align: left;
+		}
 	}
-	
+	/*PC용 css*/
 	@media all and (min-width: 960px){
 		#wrap{
 			position: relative;
